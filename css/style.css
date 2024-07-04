@@ -1,0 +1,546 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --dark-color: #212529;
+}
+/* ==================== start navbar ===================*/
+.site-nav {
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+.site-nav .navbar {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+.site-nav .navbar-nav {
+  gap: 20px;
+}
+.site-nav .navbar-nav li {
+  display: flex;
+  justify-content: center;
+}
+.site-nav .navbar-toggler {
+  border: 0;
+}
+
+.site-nav a.active,
+.site-nav a.nav-link {
+  color: var(--dark-color);
+  overflow: hidden;
+}
+
+.site-nav .nav-link::after {
+  transition: all 0.5s;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-color);
+  transform: translateX(-150%);
+}
+.site-nav a.active::after {
+  transform: translateX(0);
+}
+/* ==================== end navbar ===================*/
+/* ==================== start home ===================*/
+
+#home {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+#home .home-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home .home-context h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+#home .home-context p {
+  font-size: 50px;
+  font-weight: 100;
+}
+
+#home .home-context p > span {
+  font-weight: 400;
+}
+
+#home .home-social ul {
+  gap: 5px;
+}
+#home .home-social ul li {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 5px 7px;
+}
+
+#home .home-social ul li a {
+  color: #fff;
+}
+/* ==================== end home ===================*/
+
+/* ==================== start about ===================*/
+#about .about-portrait {
+  position: relative;
+}
+#about .about-portrait::after {
+  content: "";
+  width: 90%;
+  height: 80%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+}
+#about .about-context h2 {
+  font-weight: 900;
+}
+#about .about-context > span,
+#about .about-context > p {
+  color: #748182;
+  font-size: 14px;
+}
+#about .about-context > p {
+  line-height: 1.8;
+}
+#about .progress {
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  background-color: #f7f7f7;
+}
+#about .progress,
+#about .progress-bar {
+  height: 25px;
+}
+#about .progress-bar {
+  align-items: center;
+}
+
+#about .about-buttons a {
+  font-size: 14px;
+}
+#about .about-buttons .cv {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid var(--dark-color);
+  transition: all 0.5s;
+}
+#about .about-buttons .contact {
+  border: none;
+  border: 1px solid var(--dark-color);
+}
+#about .about-buttons .cv:hover {
+  background-color: #fff;
+  color: var(--dark-color);
+}
+
+/* ==================== end about ===================*/
+/* ==================== start services ===================*/
+#services {
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+#services h2 {
+  position: relative;
+  justify-content: center;
+  font-weight: 900;
+}
+#services h2::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#services .service-context {
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+#services .service-context .service-icon span {
+  display: block;
+  font-size: 25px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+#services .service-context h3 {
+  font-weight: 800;
+}
+#services .service-context p {
+  font-size: 14px;
+  word-spacing: 3px;
+  color: #748182;
+}
+#services .service-context:hover .service-icon span {
+  background-color: #343434;
+  color: #fff;
+}
+/* ==================== end services ===================*/
+/* ==================== start works ===================*/
+#works {
+  position: relative;
+  z-index: 1;
+}
+#works h2 {
+  position: relative;
+  justify-content: center;
+  font-weight: 900;
+}
+#works h2::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#works .nav .nav-link {
+  overflow: hidden;
+}
+#works .nav .nav-link span {
+  position: relative;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+#works .nav-pills .nav-link.active,
+#works .nav-pills .show > .nav-link {
+  background-color: transparent;
+}
+#works .nav-pills .nav-link.active {
+  position: relative;
+}
+#works .nav-pills .nav-link span {
+  padding-top: 7px;
+  font-weight: 600;
+}
+#works .nav-pills .nav-link.active span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-color);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+#works .item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+#works .item .item-overlay {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(5px);
+  transition: all 0.5s;
+  opacity: 0;
+}
+#works .item .item-overlay h4 {
+  font-size: 12px;
+  font-weight: 700;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  transform: translateY(-10px);
+  transition: all 0.5s;
+}
+#works .item-overlay .item-links {
+  transform: translateY(10px);
+  transition: all 0.5s;
+}
+#works .item .item-overlay span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid var(--dark-color);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#works .nav .nav-link span:active::after {
+  transform: translateX(0);
+}
+#works .item:hover .item-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+#works .item:hover .item-overlay h4 {
+  transform: translateY(0);
+}
+#works .item:hover .item-links {
+  transform: translateY(0);
+}
+#works .item .item-overlay span:hover {
+  background-color: #fff;
+  color: var(--dark-color);
+}
+/* ==================== end works ===================*/
+/* ==================== start clients ===================*/
+#clients {
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1;
+}
+
+#clients h2 {
+  position: relative;
+  font-weight: 900;
+}
+#clients h2::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#clients .slider-img {
+  width: 100px;
+}
+
+#clients .testimonial-details p {
+  font-size: 16px;
+  word-spacing: 2px;
+  color: #748182;
+}
+#clients .testimonial-details h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #343434;
+  margin-bottom: 0;
+}
+#clients .testimonial-details span {
+  font-size: 14px;
+  color: #748182;
+  font-weight: 600;
+}
+#clients .carousel-indicators button {
+  background-color: #869791;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 7px;
+}
+/* ==================== end clients ===================*/
+/* ==================== start stats ===================*/
+#stats span {
+  font-size: 30px;
+}
+#stats h5 {
+  font-weight: 900;
+}
+#stats p {
+  color: #748182;
+  font-weight: 600;
+}
+/* ==================== end stats ===================*/
+/* ==================== start team ===================*/
+#team {
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1;
+}
+#team h2 {
+  position: relative;
+  font-weight: 900;
+}
+#team h2::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#team .member-img {
+  position: relative;
+}
+#team .social-overlay {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transform: rotateY(180deg) scale(0.5);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#team .social-overlay > div {
+  position: absolute;
+  bottom: 40%;
+}
+#team .social-overlay > div span {
+  width: 35px;
+  height: 35px;
+  background-color: var(--dark-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid var(--dark-color);
+  transition: all 0.5s;
+}
+#team .memebre-details {
+  text-align: center;
+  background-color: #5b5b5b;
+  color: #fff;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+#team .memebre-details h4 {
+  font-size: 24px;
+}
+#team .memebre-details p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#team .memeber-card:hover .social-overlay {
+  transform: rotateY(0) scale(1);
+  opacity: 1;
+}
+#team .social-overlay > div span:hover {
+  background-color: #fff;
+  color: var(--dark-color);
+}
+/* ==================== end team ===================*/
+
+/* ================= start contact ================ */
+#contact {
+  position: relative;
+  z-index: 1;
+}
+#contact h2 {
+  position: relative;
+  font-weight: 900;
+}
+#contact h2::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#contact .contact-details > div span {
+  background-color: #f4f4f4;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+#contact .contact-details > div p {
+  color: #748182;
+}
+#contact .contact-details > div:hover span {
+  background-color: #343434;
+  color: #fff;
+}
+
+#contact .contact-form .form-input input,
+#contact .contact-form textarea {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact .contact-form button {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.5s;
+  border: 1px solid var(--dark-color);
+}
+#contact .contact-form .form-input input:focus,
+#contact .contact-form textarea:focus {
+  outline: none;
+}
+#contact .contact-form button:hover {
+  background-color: #fff;
+  color: var(--dark-color);
+}
+/* ================= end contact ================== */
+
+/* ================= start footer ================== */
+footer {
+  background-color: #1c1c1c;
+}
+footer p {
+  color: #748182;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+/* ================= end footer ================== */
